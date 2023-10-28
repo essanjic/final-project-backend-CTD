@@ -1,16 +1,17 @@
 package com.cenapp.service;
+
 import com.cenapp.model.User;
 import com.cenapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
+
+;
 
 @Service
 public class UserServiceImplementation implements IUserService {
 
-    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     UserRepository userRepository;
 

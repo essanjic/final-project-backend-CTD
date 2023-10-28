@@ -1,7 +1,8 @@
 package com.cenapp.controller;
+
 import com.cenapp.model.User;
 import com.cenapp.service.UserServiceImplementation;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.List;
 @RequestMapping("/api/v1")
 public class UserController {
 
-    final
+    @Autowired
     UserServiceImplementation userServiceImplementation;
 
     public UserController(UserServiceImplementation userServiceImplementation) {
@@ -22,10 +23,11 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> findAllUsers(){
+
         return userServiceImplementation.findAll();
     }
 
-    @GetMapping("/users/{id}")
+    @GetMapping("/user/{id}")
     public ResponseEntity<User> findUserById(@PathVariable Long id) {
         User userForID = userServiceImplementation.findById(id);
 
