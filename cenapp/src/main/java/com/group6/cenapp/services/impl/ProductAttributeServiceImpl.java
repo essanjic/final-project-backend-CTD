@@ -1,8 +1,8 @@
 package com.group6.cenapp.services.impl;
 
 import com.group6.cenapp.exception.DuplicatedValueException;
-import com.group6.cenapp.model.ProductAttribute;
-import com.group6.cenapp.repository.ProductAttributeRepository;
+import com.group6.cenapp.model.FoodAttribute;
+import com.group6.cenapp.repository.FoodAttributeRepository;
 import com.group6.cenapp.services.ProductAttributeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,40 +14,40 @@ import java.util.Optional;
 public class ProductAttributeServiceImpl implements ProductAttributeService {
 
     @Autowired
-    ProductAttributeRepository productAttributeRepository;
+    FoodAttributeRepository foodAttributeRepository;
 
     @Override
-    public List<ProductAttribute> getAllProductAttribute() {
-        return productAttributeRepository.findAll();
+    public List<FoodAttribute> getAllProductAttribute() {
+        return foodAttributeRepository.findAll();
     }
 
     @Override
-    public Optional<ProductAttribute> getProductAttributeById(Integer id) {
-        return productAttributeRepository.findById(id);
+    public Optional<FoodAttribute> getProductAttributeById(Integer id) {
+        return foodAttributeRepository.findById(id);
     }
 
     @Override
-    public ProductAttribute saveProductAttribute(ProductAttribute productAttribute) throws DuplicatedValueException {
-        Optional<ProductAttribute> existIcon = productAttributeRepository.getByIcon(productAttribute.getIcon());
+    public FoodAttribute saveProductAttribute(FoodAttribute foodAttribute) throws DuplicatedValueException {
+        Optional<FoodAttribute> existIcon = foodAttributeRepository.getByIcon(foodAttribute.getIcon());
         if(existIcon.isPresent()){
             throw new DuplicatedValueException("Ya existe este ícono: '" + existIcon.get().getName() + "'");
         }
-        return productAttributeRepository.save(productAttribute);
+        return foodAttributeRepository.save(foodAttribute);
     }
 
     @Override
-    public ProductAttribute updateProductAttribute(ProductAttribute productAttribute) {
-        return productAttributeRepository.save(productAttribute);
+    public FoodAttribute updateProductAttribute(FoodAttribute foodAttribute) {
+        return foodAttributeRepository.save(foodAttribute);
     }
 
     @Override
     public void deleteProductAttributeById(Integer id) {
-        productAttributeRepository.deleteById(id);
+        foodAttributeRepository.deleteById(id);
     }
 
 
     @Override
-    public Optional<ProductAttribute> getProductAttributeByIcon(String icon) {
-        return productAttributeRepository.getByIcon(icon);
+    public Optional<FoodAttribute> getProductAttributeByIcon(String icon) {
+        return foodAttributeRepository.getByIcon(icon);
     }
 }

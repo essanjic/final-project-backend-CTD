@@ -20,7 +20,7 @@ public class Reservation {
 
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
-    private Product product;
+    private Food food;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
@@ -29,13 +29,13 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(Integer id, Time arrival_time, LocalDate check_in_date, LocalDate checkout_date, String comments, Product product, User user) {
+    public Reservation(Integer id, Time arrival_time, LocalDate check_in_date, LocalDate checkout_date, String comments, Food food, User user) {
         this.id = id;
         this.arrival_time = arrival_time;
         this.check_in_date = check_in_date;
         this.checkout_date = checkout_date;
         this.comments = comments;
-        this.product = product;
+        this.food = food;
         this.user = user;
     }
 
@@ -79,12 +79,12 @@ public class Reservation {
         this.comments = comments;
     }
 
-    public Product getProduct() {
-        return product;
+    public Food getProduct() {
+        return food;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProduct(Food food) {
+        this.food = food;
     }
 
     public User getUser() {

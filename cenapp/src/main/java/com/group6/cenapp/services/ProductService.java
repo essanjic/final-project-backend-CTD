@@ -2,23 +2,23 @@ package com.group6.cenapp.services;
 
 import com.group6.cenapp.model.Category;
 import com.group6.cenapp.model.City;
-import com.group6.cenapp.model.Product;
+import com.group6.cenapp.model.Food;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 public interface ProductService {
-    List<Product> getAllProducts();
-    Optional<Product> getProductById(Integer id);
-    List<Product>getProductsByCategory(Category id);
-    Product saveProduct(Product product);
-    Product updateProduct(Product product);
+    List<Food> getAllProducts();
+    Optional<Food> getProductById(Integer id);
+    List<Food>getProductsByCategory(Category id);
+    Food saveProduct(Food food);
+    Food updateProduct(Food food);
     void deleteProductById(Integer id);
-    List<Product>getProductsByCity(City id);
-    List<Product> getProductsByRangeDate(LocalDate check_in_date, LocalDate check_out_date);
-    List<Product> getProductsByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date);
+    List<Food>getProductsByCity(City id);
+    List<Food> getProductsByRangeDate(LocalDate check_in_date, LocalDate check_out_date);
+    List<Food> getProductsByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date);
 
-    List<Product> getRandomProduct();
+    List<Food> getRandomProduct();
 
 }

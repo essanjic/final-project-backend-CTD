@@ -23,7 +23,7 @@ public class Image {
     @ManyToOne
     @JoinColumn(name="product_id", referencedColumnName = "id")
     @JsonIdentityReference(alwaysAsId = true)
-    private Product product;
+    private Food food;
 
     public Image() {
     }
@@ -58,11 +58,11 @@ public class Image {
         this.url = url;
     }
 
-    public Product getProduct() {
-        return product;
+    public Food getProduct() {
+        return food;
     }
 
-    public void setProduct(Product product) {
-        this.product = product;
+    public void setProduct(Food food) {
+        this.food = food;
     }
 }

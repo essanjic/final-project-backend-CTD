@@ -1,6 +1,6 @@
 package com.group6.cenapp.controller;
 
-import com.group6.cenapp.model.ProductAttribute;
+import com.group6.cenapp.model.FoodAttribute;
 import com.group6.cenapp.services.ProductAttributeService;
 import com.group6.cenapp.exception.DuplicatedValueException;
 import io.swagger.annotations.Api;
@@ -22,13 +22,13 @@ public class FoodAttributeControllet {
     private ProductAttributeService productAttributeService;
 
     @GetMapping
-    public ResponseEntity<List<ProductAttribute>> getAllAttributes() {
+    public ResponseEntity<List<FoodAttribute>> getAllAttributes() {
         return ResponseEntity.ok(productAttributeService.getAllProductAttribute());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductAttribute> getAttributeById(@PathVariable Integer id) {
-        Optional<ProductAttribute> findAttribute = productAttributeService.getProductAttributeById(id);
+    public ResponseEntity<FoodAttribute> getAttributeById(@PathVariable Integer id) {
+        Optional<FoodAttribute> findAttribute = productAttributeService.getProductAttributeById(id);
         if (findAttribute.isPresent()) {
             return ResponseEntity.ok(findAttribute.get());
         } else {
@@ -37,17 +37,17 @@ public class FoodAttributeControllet {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<ProductAttribute> createAttribute(@RequestBody ProductAttribute productAttribute) throws DuplicatedValueException {
-        return ResponseEntity.ok(productAttributeService.saveProductAttribute(productAttribute));
+    public ResponseEntity<FoodAttribute> createAttribute(@RequestBody FoodAttribute foodAttribute) throws DuplicatedValueException {
+        return ResponseEntity.ok(productAttributeService.saveProductAttribute(foodAttribute));
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> updateAttribute(@RequestBody ProductAttribute productAttribute) throws Exception {
-        Optional<ProductAttribute> findAttribute = productAttributeService.getProductAttributeById(productAttribute.getId());
+    public ResponseEntity<?> updateAttribute(@RequestBody FoodAttribute foodAttribute) throws Exception {
+        Optional<FoodAttribute> findAttribute = productAttributeService.getProductAttributeById(foodAttribute.getId());
         if (findAttribute.isPresent()) {
-            return ResponseEntity.ok(productAttributeService.updateProductAttribute(productAttribute));
+            return ResponseEntity.ok(productAttributeService.updateProductAttribute(foodAttribute));
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El atributo con ID: " + productAttribute.getId() + " no se encuentra");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El atributo con ID: " + foodAttribute.getId() + " no se encuentra");
         }
     }
 
