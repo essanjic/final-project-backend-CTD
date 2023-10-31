@@ -2,7 +2,7 @@ package com.group6.cenapp.controller;
 
 import com.group6.cenapp.model.Category;
 import com.group6.cenapp.model.City;
-import com.group6.cenapp.model.Product;
+import com.group6.cenapp.model.Food;
 import com.group6.cenapp.response.ApiResponseHandler;
 import com.group6.cenapp.services.ProductService;
 import io.swagger.annotations.Api;
@@ -28,14 +28,14 @@ public class FoodController {
     private ProductService prodctService;
 
     @GetMapping
-    public ResponseEntity<List<Product>> listarProductos(){
+    public ResponseEntity<List<Food>> listarProductos(){
         return ResponseEntity.ok(prodctService.getAllProducts());
     }
 
     @ApiOperation(value="Product by ID", notes="Product by ID")
     @GetMapping("/{id}")
     public ResponseEntity<Object> buscarProducto(@PathVariable Integer id)  {
-        Optional<Product> productoBuscado = prodctService.getProductById(id);
+        Optional<Food> productoBuscado = prodctService.getProductById(id);
         if(productoBuscado.isPresent())
             return ApiResponseHandler.generateResponse("Product data retrieved successfully", HttpStatus.OK, productoBuscado.get());
 
@@ -43,27 +43,27 @@ public class FoodController {
     }
 
     @GetMapping("/category/{id}")
-    public ResponseEntity<List<Product>> searchProductByCategory(@PathVariable Category id) {
-        List<Product> productsSearch = prodctService.getProductsByCategory(id);
-         if(!productsSearch.isEmpty()){
-            return ResponseEntity.ok(productsSearch);
+    public ResponseEntity<List<Food>> searchProductByCategory(@PathVariable Category id) {
+        List<Food> productsSearches = prodctService.getProductsByCategory(id);
+         if(!productsSearches.isEmpty()){
+            return ResponseEntity.ok(productsSearches);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Product> crearProducto(@RequestBody Product product){
-        return ResponseEntity.ok(prodctService.saveProduct(product));
+    public ResponseEntity<Food> crearProducto(@RequestBody Food food){
+        return ResponseEntity.ok(prodctService.saveProduct(food));
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> editarProducto(@RequestBody Product product) throws Exception{
-        Optional<Product> productoBuscado = prodctService.getProductById(product.getId());
+    public ResponseEntity<?> editarProducto(@RequestBody Food food) throws Exception{
+        Optional<Food> productoBuscado = prodctService.getProductById(food.getId());
         if(productoBuscado.isPresent()){
-            return ResponseEntity.ok(prodctService.updateProduct(product));
+            return ResponseEntity.ok(prodctService.updateProduct(food));
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El producto con ID: " + product.getId() + " no se encuentra ");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El producto con ID: " + food.getId() + " no se encuentra ");
         }
 
     }
@@ -78,36 +78,36 @@ public class FoodController {
     }
 
     @GetMapping("/city/{id}")
-    public ResponseEntity<List<Product>> searchProductByCategory(@PathVariable City id) {
-        List<Product> productsSearch = prodctService.getProductsByCity(id);
-        if(!productsSearch.isEmpty()){
-            return ResponseEntity.ok(productsSearch);
+    public ResponseEntity<List<Food>> searchProductByCategory(@PathVariable City id) {
+        List<Food> productsSearches = prodctService.getProductsByCity(id);
+        if(!productsSearches.isEmpty()){
+            return ResponseEntity.ok(productsSearches);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     @GetMapping("/dates/{startDate}/{endDate}")
-    public ResponseEntity<List<Product>> searchProductsByRangeDate(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
-        List<Product> productsSearch = prodctService.getProductsByRangeDate(startDate, endDate);
-        if(!productsSearch.isEmpty()){
-            return ResponseEntity.ok(productsSearch);
+    public ResponseEntity<List<Food>> searchProductsByRangeDate(@PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
+        List<Food> productsSearches = prodctService.getProductsByRangeDate(startDate, endDate);
+        if(!productsSearches.isEmpty()){
+            return ResponseEntity.ok(productsSearches);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     @GetMapping("/cityAndDates/{cityId}/{startDate}/{endDate}")
-    public ResponseEntity<List<Product>> searchProductsByRangeDate(@PathVariable Integer cityId, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
-        List<Product> productsSearch = prodctService.getProductsByCityAndRangeDate(cityId, startDate, endDate);
-        if(!productsSearch.isEmpty()){
-            return ResponseEntity.ok(productsSearch);
+    public ResponseEntity<List<Food>> searchProductsByRangeDate(@PathVariable Integer cityId, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate, @PathVariable @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate endDate) {
+        List<Food> productsSearches = prodctService.getProductsByCityAndRangeDate(cityId, startDate, endDate);
+        if(!productsSearches.isEmpty()){
+            return ResponseEntity.ok(productsSearches);
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
     @GetMapping("findAll/random")
-    public ResponseEntity<List<Product>> findAllRandom(){
+    public ResponseEntity<List<Food>> findAllRandom(){
         return ResponseEntity.ok(prodctService.getRandomProduct());
     }
 }

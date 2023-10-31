@@ -6,7 +6,7 @@ import java.util.List;
 @Entity
 @Table(name="product")
 
-public class Product {
+public class Food {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -50,9 +50,9 @@ public class Product {
     @ManyToMany(cascade={CascadeType.MERGE})
     @JoinTable(name="product_spec", joinColumns=@JoinColumn(name="id_product"),
             inverseJoinColumns=@JoinColumn(name="id_spec"))
-    private List <ProductAttribute> attributes;
+    private List <FoodAttribute> attributes;
 
-    public Product() {
+    public Food() {
     }
 
    /* public Product(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category) {
@@ -88,7 +88,7 @@ public class Product {
         this.policiesCancellation = policiesCancellation;
     }*/
 
-    public Product(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation, List<ProductAttribute> attributes) {
+    public Food(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation, List<FoodAttribute> attributes) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -234,11 +234,11 @@ public class Product {
         this.policiesCancellation = policiesCancellation;
     }
 
-    public List<ProductAttribute> getAttributes() {
+    public List<FoodAttribute> getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(List<ProductAttribute> attributes) {
+    public void setAttributes(List<FoodAttribute> attributes) {
         this.attributes = attributes;
     }
 }

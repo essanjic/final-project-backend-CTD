@@ -2,9 +2,9 @@ package com.group6.cenapp.services.impl;
 
 import com.group6.cenapp.exception.BadRequestException;
 import com.group6.cenapp.model.Image;
-import com.group6.cenapp.model.Product;
+import com.group6.cenapp.model.Food;
 import com.group6.cenapp.repository.ImageRepository;
-import com.group6.cenapp.repository.ProductRepository;
+import com.group6.cenapp.repository.FoodRepository;
 import com.group6.cenapp.services.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class ImageServiceImpl implements ImageService {
     ImageRepository imageRepository;
 
     @Autowired
-    ProductRepository productRepository;
+    FoodRepository foodRepository;
 
     @Override
     public List<Image> getAllImages() {
@@ -32,7 +32,7 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public Image saveImage(Image image, Integer productId) {
-        Optional<Product> optProduct = productRepository.findById(productId);
+        Optional<Food> optProduct = foodRepository.findById(productId);
 
             image.setProduct(optProduct.get());
             return imageRepository.save(image);

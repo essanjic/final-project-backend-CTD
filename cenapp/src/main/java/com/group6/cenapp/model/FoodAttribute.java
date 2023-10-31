@@ -1,12 +1,10 @@
 package com.group6.cenapp.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityReference;
-
 import javax.persistence.*;
 
 @Table(name="spec")
 @Entity
-public class ProductAttribute {
+public class FoodAttribute {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -14,10 +12,10 @@ public class ProductAttribute {
     private String icon;
 
 
-    public ProductAttribute() {
+    public FoodAttribute() {
     }
 
-    public ProductAttribute(Integer id, String name, String icon) {
+    public FoodAttribute(Integer id, String name, String icon) {
         this.id = id;
         this.name = name;
         this.icon = icon;

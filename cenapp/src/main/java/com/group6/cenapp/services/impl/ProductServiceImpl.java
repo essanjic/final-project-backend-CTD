@@ -1,8 +1,8 @@
 package com.group6.cenapp.services.impl;
 import com.group6.cenapp.model.Category;
 import com.group6.cenapp.model.City;
-import com.group6.cenapp.model.Product;
-import com.group6.cenapp.repository.ProductRepository;
+import com.group6.cenapp.model.Food;
+import com.group6.cenapp.repository.FoodRepository;
 import com.group6.cenapp.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,53 +14,53 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
     @Autowired
-    private ProductRepository productRepository;
+    private FoodRepository foodRepository;
 
     @Override
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public List<Food> getAllProducts() {
+        return foodRepository.findAll();
     }
 
     @Override
-    public Optional<Product> getProductById(Integer id) {
-        return productRepository.findById(id);
+    public Optional<Food> getProductById(Integer id) {
+        return foodRepository.findById(id);
     }
 
     @Override
-    public Product saveProduct(Product product) {
-        return productRepository.save(product);
+    public Food saveProduct(Food food) {
+        return foodRepository.save(food);
     }
 
     @Override
-    public Product updateProduct(Product product) {
-        return productRepository.save(product);
+    public Food updateProduct(Food food) {
+        return foodRepository.save(food);
     }
 
     @Override
     public void deleteProductById(Integer id) {
-        productRepository.deleteById(id);
+        foodRepository.deleteById(id);
     }
 
     @Override
-    public List<Product> getProductsByCategory(Category id) {
-        return productRepository.getByCategory(id);
+    public List<Food> getProductsByCategory(Category id) {
+        return foodRepository.getByCategory(id);
     }
 
-    public List<Product> getProductsByCity(City id)  { return productRepository.getByCity(id);
+    public List<Food> getProductsByCity(City id)  { return foodRepository.getByCity(id);
     }
 
     @Override
-    public List<Product> getProductsByRangeDate(LocalDate check_in_date, LocalDate check_out_date) {
+    public List<Food> getProductsByRangeDate(LocalDate check_in_date, LocalDate check_out_date) {
         //System.out.println(check_in_date + " --- " + check_out_date);
-        return productRepository.getByRangeDate(check_in_date,check_out_date);
+        return foodRepository.getByRangeDate(check_in_date,check_out_date);
     }
 
     @Override
-    public List<Product> getProductsByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date) {
-        return productRepository.getByCityAndRangeDate(city_id, check_in_date,check_out_date);
+    public List<Food> getProductsByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date) {
+        return foodRepository.getByCityAndRangeDate(city_id, check_in_date,check_out_date);
     }
     @Override
-    public List<Product> getRandomProduct() {
-        return productRepository.getRandomProduct();
+    public List<Food> getRandomProduct() {
+        return foodRepository.getRandomProduct();
     }
 }
