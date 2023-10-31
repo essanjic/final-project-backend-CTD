@@ -15,6 +15,7 @@ public class cenapp {
 		SpringApplication.run(cenapp.class, args);
 
 	}
+
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurer() {
