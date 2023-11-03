@@ -2,6 +2,7 @@ package com.group6.cenapp.services.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.group6.cenapp.exception.DuplicatedValueException;
+import com.group6.cenapp.model.Image;
 import com.group6.cenapp.model.Role;
 import com.group6.cenapp.model.User;
 import com.group6.cenapp.model.dto.UserDto;
@@ -131,6 +132,12 @@ public class UserServiceImpl implements UserDetailsService {
         User user = userRepository.findByEmail(email).get();
         String role = user.getRole().getName();
         return (role);
+    }
+
+    public Image imageUser(String email){
+        User user = userRepository.findByEmail(email).get();
+        Image image = user.getImage();
+        return (image);
     }
 
 }

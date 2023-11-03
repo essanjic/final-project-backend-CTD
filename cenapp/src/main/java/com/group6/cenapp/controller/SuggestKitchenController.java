@@ -16,7 +16,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/attributes")
-public class FoodAttributeControllet {
+public class SuggestKitchenController {
 
     @Autowired
     private ProductAttributeService productAttributeService;

@@ -22,8 +22,8 @@ public class ReservationServiceImpl implements ReservationService {
     private UserRepository userRepository;
 
     @Override
-    public List<Reservation> findByProduct_id(Integer productId) {
-        return reservationRepository.findByProduct_Id(productId);
+    public List<Reservation> findByRestaurant_id(Integer restaurantId) {
+        return reservationRepository.findByRestaurant_Id(restaurantId);
     }
 
     @Override

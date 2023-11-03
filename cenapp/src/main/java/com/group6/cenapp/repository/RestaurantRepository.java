@@ -2,7 +2,7 @@ package com.group6.cenapp.repository;
 
 import com.group6.cenapp.model.Category;
 import com.group6.cenapp.model.City;
-import com.group6.cenapp.model.Food;
+import com.group6.cenapp.model.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -11,16 +11,16 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Repository
-public interface FoodRepository extends JpaRepository<Food, Integer> {
-    List<Food> getByCategory(Category id);
-    List<Food> getByCity(City id);
+public interface RestaurantRepository extends JpaRepository<Restaurant, Integer> {
+    List<Restaurant> getByCategory(Category id);
+    List<Restaurant> getByCity(City id);
 
     @Query(value = "select P.* from product P where P.id not in (select distinct R.product_id from reservation R where (R.checkout_date >= ?1 and R.check_in_date <= ?2));", nativeQuery = true)
-    List<Food> getByRangeDate(LocalDate check_in_date, LocalDate check_out_date);
+    List<Restaurant> getByRangeDate(LocalDate check_in_date, LocalDate check_out_date);
 
     @Query(value = "select P.* from product P where P.city_id = ?1 and P.id not in (select distinct R.product_id from reservation R where (R.checkout_date >= ?2 and R.check_in_date <= ?3));", nativeQuery = true)
-    List<Food> getByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date);
+    List<Restaurant> getByCityAndRangeDate(Integer city_id, LocalDate check_in_date, LocalDate check_out_date);
     @Query(value = "SELECT * FROM product ORDER BY RAND() LIMIT 6", nativeQuery = true)
-    List<Food> getRandomProduct();
+    List<Restaurant> getRandomProduct();
 }
 

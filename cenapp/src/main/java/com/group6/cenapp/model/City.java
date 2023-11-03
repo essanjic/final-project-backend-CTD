@@ -19,7 +19,7 @@ public class City {
 
     @OneToMany(mappedBy = "city")
     @JsonIgnore
-    private List<Food> food;
+    private List<Restaurant> restaurant;
 
     public City() {
     }
@@ -30,11 +30,11 @@ public class City {
         this.country = country;
     }
 
-    public City(Integer id, String name, Country country, List<Food> food) {
+    public City(Integer id, String name, Country country, List<Restaurant> restaurant) {
         this.id = id;
         this.name = name;
         this.country = country;
-        this.food = food;
+        this.restaurant = restaurant;
     }
 
     public Integer getId() {
@@ -61,11 +61,11 @@ public class City {
         this.name = name;
     }
 
-    public List<Food> getProduct() {
-        return food;
+    public List<Restaurant> getProduct() {
+        return restaurant;
     }
 
-    public void setProduct(List<Food> food) {
-        this.food = food;
+    public void setProduct(List<Restaurant> restaurant) {
+        this.restaurant = restaurant;
     }
 }

@@ -1,10 +1,11 @@
 package com.group6.cenapp.model.dto;
 
 import com.group6.cenapp.model.City;
+import com.group6.cenapp.model.Image;
 import com.group6.cenapp.model.Role;
 
 public class UserDto {
-    private Integer id;
+    private int id;
     private String name;
     private String lastName;
     private String email;
@@ -12,6 +13,7 @@ public class UserDto {
     private boolean enabled;
     private City city;
     private Role role;
+    private Image image;
 
     public Integer getId() {
         return id;
@@ -76,4 +78,8 @@ public class UserDto {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public Image getImage() {return image;}
+
+    public void setImage(Image image) {this.image = image;}
 }

@@ -29,7 +29,7 @@ public class AuthenticationController {
     private UserServiceImpl userServiceImpl;
 
 
-    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+    @RequestMapping(value = "/v1/api/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationDtoRequest authenticationRequest) throws AuthenticationException {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getEmail(), authenticationRequest.getPassword()));
@@ -48,7 +48,7 @@ public class AuthenticationController {
         return ResponseEntity.ok(new AuthenticationDtoResponse((jwt), id, name, lastName, email, city, role));
     }
 
-    @RequestMapping({"/cenapp"})
+    @RequestMapping({"/v1/api/cenapp"})
     public String hello() {
         return "Welcome to cenapp";
     }

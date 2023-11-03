@@ -2,9 +2,9 @@ package com.group6.cenapp.services.impl;
 
 import com.group6.cenapp.exception.BadRequestException;
 import com.group6.cenapp.model.Image;
-import com.group6.cenapp.model.Food;
+import com.group6.cenapp.model.Restaurant;
 import com.group6.cenapp.repository.ImageRepository;
-import com.group6.cenapp.repository.FoodRepository;
+import com.group6.cenapp.repository.RestaurantRepository;
 import com.group6.cenapp.services.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class ImageServiceImpl implements ImageService {
     ImageRepository imageRepository;
 
     @Autowired
-    FoodRepository foodRepository;
+    RestaurantRepository restaurantRepository;
 
     @Override
     public List<Image> getAllImages() {
@@ -32,7 +32,7 @@ public class ImageServiceImpl implements ImageService {
 
     @Override
     public Image saveImage(Image image, Integer productId) {
-        Optional<Food> optProduct = foodRepository.findById(productId);
+        Optional<Restaurant> optProduct = restaurantRepository.findById(productId);
 
             image.setProduct(optProduct.get());
             return imageRepository.save(image);
@@ -47,7 +47,7 @@ public class ImageServiceImpl implements ImageService {
             throw new BadRequestException("La imagen no corresponde al producto con ID: "+ productId);
         }
 
-        imageBdd.get().setTitle(image.getTitle());
+        imageBdd.get().setName(image.getName());
         imageBdd.get().setUrl(image.getUrl());
         return imageRepository.save(imageBdd.get());
     }

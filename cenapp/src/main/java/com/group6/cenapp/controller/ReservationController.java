@@ -4,7 +4,7 @@ package com.group6.cenapp.controller;
 import com.group6.cenapp.model.Reservation;
 import com.group6.cenapp.model.User;
 import com.group6.cenapp.repository.UserRepository;
-import com.group6.cenapp.services.ProductService;
+import com.group6.cenapp.services.RestaurantService;
 import com.group6.cenapp.services.ReservationService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +29,7 @@ public class ReservationController  {
     @Autowired
     private UserRepository userRepository;
     @Autowired
-    private ProductService productService;
+    private RestaurantService tableService;
 
     @GetMapping
     public ResponseEntity<List<Reservation>> listarResrevas() {
@@ -41,9 +41,9 @@ public class ReservationController  {
         return new ResponseEntity<>(reservationService.findByUser_id(id), HttpStatus.OK);
     }
 
-    @GetMapping("/product/{id}")
-    public ResponseEntity<List<Reservation>> findAllByProductId(@PathVariable("id") Integer id) {
-        return new ResponseEntity<>(reservationService.findByProduct_id(id), HttpStatus.OK);
+    @GetMapping("/restaurant/{id}")
+    public ResponseEntity<List<Reservation>> findAllByRestaurantId(@PathVariable("id") Integer id) {
+        return new ResponseEntity<>(reservationService.findByRestaurant_id(id), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

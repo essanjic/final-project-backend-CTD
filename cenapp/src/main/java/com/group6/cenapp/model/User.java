@@ -17,21 +17,23 @@ public class User {
     private String password;
     private boolean enabled;
 
-    @ManyToOne/*(cascade = CascadeType.ALL,fetch = FetchType.EAGER)*/
+    @ManyToOne
     @JoinColumn(name = "city_id", referencedColumnName = "id")
     private City city;
 
 
     @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    @JoinColumn(name = "role_id",referencedColumnName = "id")
+    @JoinColumn(name = "role_id", referencedColumnName = "id")
     private Role role;
 
 
-    public User() {
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "image_id", referencedColumnName = "id")
+    private Image image;
 
-    public User(int id, String name, String lastName, String email, String password, boolean enabled, City city, Role role) {
+
+    public User(int id, String name, String lastName, String email, String password, boolean enabled, City city, Role role, Image image) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -40,6 +42,11 @@ public class User {
         this.enabled = enabled;
         this.city = city;
         this.role = role;
+        this.image = image;
+    }
+
+    public User() {
+
     }
 
     public int getId() {
@@ -104,5 +111,11 @@ public class User {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+    public Image getImage() {
+        return image;
+    }
+    public void setImage(Image image) {
+        this.image = image;
     }
 }
