@@ -15,7 +15,8 @@ import java.util.List;
 import java.util.Optional;
 
 @Api(tags="Users")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*",
+methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
 @RequestMapping("/v1/api/users")
 public class UserController {

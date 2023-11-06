@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="table")
+@Table(name="restaurant")
 
 public class Restaurant {
     @Id

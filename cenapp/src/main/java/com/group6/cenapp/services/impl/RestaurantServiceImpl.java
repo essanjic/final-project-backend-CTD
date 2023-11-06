@@ -28,6 +28,7 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     @Override
     public Restaurant saveRestaurant(Restaurant restaurant) {
+
         return restaurantRepository.save(restaurant);
     }
 
@@ -61,6 +62,6 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
     @Override
     public List<Restaurant> getRandomRestaurant() {
-        return restaurantRepository.getRandomProduct();
+        return restaurantRepository.getRandomRestaurant();
     }
 }

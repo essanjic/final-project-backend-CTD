@@ -21,7 +21,7 @@ import java.util.Optional;
 @Api(tags="Restaurant")
 @CrossOrigin (origins = "*")
 @RestController
-@RequestMapping("/restaurant")
+@RequestMapping("/v1/api/restaurants")
 public class RestaurantController {
 
     @Autowired
@@ -32,14 +32,14 @@ public class RestaurantController {
         return ResponseEntity.ok(restaurantService.getAllRestaurants());
     }
 
-    @ApiOperation(value="Product by ID", notes="Product by ID")
+    @ApiOperation(value="Product by ID", notes="Restaurant by ID")
     @GetMapping("/{id}")
     public ResponseEntity<Object> findRestaurant(@PathVariable Integer id)  {
         Optional<Restaurant> productoBuscado = restaurantService.getRestaurantById(id);
         if(productoBuscado.isPresent())
-            return ApiResponseHandler.generateResponse("Product data retrieved successfully", HttpStatus.OK, productoBuscado.get());
+            return ApiResponseHandler.generateResponse("Restaurant data retrieved successfully", HttpStatus.OK, productoBuscado.get());
 
-        return ApiResponseHandler.generateResponseError("Product "+ id + " not found", HttpStatus.NOT_FOUND);
+        return ApiResponseHandler.generateResponseError("Restaurant "+ id + " not found", HttpStatus.NOT_FOUND);
     }
 
     @GetMapping("/category/{id}")
@@ -53,32 +53,32 @@ public class RestaurantController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Restaurant> crearProducto(@RequestBody Restaurant restaurant){
+    public ResponseEntity<Restaurant> createRestaurant(@RequestBody Restaurant restaurant){
         return ResponseEntity.ok(restaurantService.saveRestaurant(restaurant));
     }
 
     @PutMapping("/update")
-    public ResponseEntity<?> editarProducto(@RequestBody Restaurant restaurant) throws Exception{
+    public ResponseEntity<?> editRestaurant(@RequestBody Restaurant restaurant) throws Exception{
         Optional<Restaurant> productoBuscado = restaurantService.getRestaurantById(restaurant.getId());
         if(productoBuscado.isPresent()){
             return ResponseEntity.ok(restaurantService.updateRestaurant(restaurant));
         } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El producto con ID: " + restaurant.getId() + " no se encuentra ");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("El restaurante con ID: " + restaurant.getId() + " no se encuentra ");
         }
 
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> eliminarProducto(@PathVariable Integer id){
+    public ResponseEntity<String> deleteRestaurant(@PathVariable Integer id){
         if(restaurantService.getRestaurantById(id).isPresent()){
             restaurantService.deleteRestaurantById(id);
-            return ResponseEntity.ok("Se eliminó con éxito el producto con ID: " + id);
+            return ResponseEntity.ok("Se eliminó con éxito el restaurante con ID: " + id);
         }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró el producto con ID: " + id);
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No se encontró el restaurante con ID: " + id);
     }
 
     @GetMapping("/city/{id}")
-    public ResponseEntity<List<Restaurant>> searchProductByCategory(@PathVariable City id) {
+    public ResponseEntity<List<Restaurant>> searchRestaurantByCategory(@PathVariable City id) {
         List<Restaurant> restaurantSearches = restaurantService.getRestaurantByCity(id);
         if(!restaurantSearches.isEmpty()){
             return ResponseEntity.ok(restaurantSearches);

@@ -117,8 +117,7 @@ public class UserServiceImpl implements UserDetailsService {
 
     public String emailUser(String email) {
         User user = userRepository.findByEmail(email).get();
-        String eMail = user.getEmail();
-        return (eMail);
+        return (user.getEmail());
     }
 
     public String cityUser(String email){
