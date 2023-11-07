@@ -21,21 +21,22 @@ public class City {
     @JsonIgnore
     private List<Restaurant> restaurant;
 
-    public City() {
+    public City(Integer id) {
+        this.id = id;
     }
 
-    public City(Integer id, String name, Country country) {
-        this.id = id;
-        this.name = name;
-        this.country = country;
-    }
-
-    public City(Integer id, String name, Country country, List<Restaurant> restaurant) {
-        this.id = id;
-        this.name = name;
-        this.country = country;
-        this.restaurant = restaurant;
-    }
+//    public City(Integer id, String name, Country country) {
+//        this.id = id;
+//        this.name = name;
+//        this.country = country;
+//    }
+//
+//    public City(Integer id, String name, Country country, List<Restaurant> restaurant) {
+//        this.id = id;
+//        this.name = name;
+//        this.country = country;
+//        this.restaurant = restaurant;
+//    }
 
     public Integer getId() {
         return id;

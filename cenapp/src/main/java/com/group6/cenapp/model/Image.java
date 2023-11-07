@@ -26,14 +26,15 @@ public class Image {
     private Restaurant restaurant;
 
 
-    public Image(Integer id, String name, String url, Restaurant restaurant) {
-        this.id = id;
-        this.name = name;
-        this.url = url;
-        this.restaurant = restaurant;
-    }
+//    public Image(Integer id, String name, String url, Restaurant restaurant) {
+//        this.id = id;
+//        this.name = name;
+//        this.url = url;
+//        this.restaurant = restaurant;
+//    }
 
-    public Image() {
+    public Image(Integer id) {
+        this.id = id;
     }
     public Image(String name, String url) {
         this.name = name;
