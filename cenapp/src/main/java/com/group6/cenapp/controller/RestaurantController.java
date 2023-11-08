@@ -1,5 +1,6 @@
 package com.group6.cenapp.controller;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.group6.cenapp.model.Category;
 import com.group6.cenapp.model.City;
 import com.group6.cenapp.model.Restaurant;
@@ -7,6 +8,7 @@ import com.group6.cenapp.response.ApiResponseHandler;
 import com.group6.cenapp.services.RestaurantService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import net.bytebuddy.agent.builder.AgentBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -22,6 +24,7 @@ import java.util.Optional;
 @CrossOrigin (origins = "*")
 @RestController
 @RequestMapping("/v1/api/restaurants")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class RestaurantController {
 
     @Autowired

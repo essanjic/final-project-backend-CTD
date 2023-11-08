@@ -53,40 +53,16 @@ public class UserServiceImpl implements UserDetailsService {
     public Optional<User> getUserById(Integer id) { return userRepository.findById(id);}
 
     public User saveUser(UserDto userDto) throws DuplicatedValueException {
-//        System.out.println("HOLA 1");
+
         Optional<User> existUser = userRepository.findByEmail(userDto.getEmail());
         if(existUser.isPresent()) {
             throw new DuplicatedValueException("Este email ya se encuentra en uso");
         }
-        System.out.println("HOLA :)");
-////
-//        System.out.println(userDto.getId());
-//        System.out.println(userDto.getName());
-//        System.out.println(userDto.getLastName());
-//        System.out.println(userDto.getEmail());
-//        System.out.println(userDto.getPassword());
-//        System.out.println(userDto.isEnabled());
-//        System.out.println(userDto.getCity().getId());
-//        System.out.println(userDto.getRole().getName());
-//        System.out.println(userDto.getImage());
-
-//        System.out.println(userDto.toString());
-//        System.out.println(roleRepository.findById(userDto.getRole()));
-//        System.out.println(roleRepository.findById(userDto.getRole().getId()));
-//        System.out.println(userDto.getRole().getId());
-
 
         Role roleUser = roleRepository.findById(userDto.getRole().getId()).get();
-
         userDto.setRole(roleUser);
-
         userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
-
-//        System.out.println(userDto);
-
         User user = mapper.convertValue(userDto, User.class);
-        System.out.println(user);
-        System.out.println("ADIOS :(");
         return userRepository.save(user);
     }
 
@@ -108,10 +84,7 @@ public class UserServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email).get();
         String role = user.getRole().getName();
-        //System.out.println(role);
 
-        //User user = userRepository.findByUsername(username)
-        //.orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
 
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority(role));

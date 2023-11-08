@@ -1,11 +1,17 @@
 package com.group6.cenapp.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name="restaurant")
-
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -49,8 +55,6 @@ public class Restaurant {
             inverseJoinColumns=@JoinColumn(name="id_spec"))
     private List <FoodAttribute> attributes;
 
-    public Restaurant() {
-    }
 
     public Restaurant(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation, List<FoodAttribute> attributes) {
         this.id = id;
