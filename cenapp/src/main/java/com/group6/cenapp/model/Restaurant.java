@@ -1,12 +1,18 @@
 package com.group6.cenapp.model;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="product")
-
-public class Food {
+@Getter
+@Setter
+@NoArgsConstructor
+@Table(name="restaurant")
+public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -28,9 +34,6 @@ public class Food {
     @JoinColumn(name = "city_id", referencedColumnName = "id")
     private City city;
 
-    @OneToMany (mappedBy = "product", cascade = CascadeType.ALL)
-    //@JsonIgnore
-    private List<Image> image;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
@@ -48,47 +51,12 @@ public class Food {
     //private List<ProductAttribute> attributes;
 
     @ManyToMany(cascade={CascadeType.MERGE})
-    @JoinTable(name="product_spec", joinColumns=@JoinColumn(name="id_product"),
+    @JoinTable(name="table_spec", joinColumns=@JoinColumn(name="id_table"),
             inverseJoinColumns=@JoinColumn(name="id_spec"))
     private List <FoodAttribute> attributes;
 
-    public Food() {
-    }
 
-   /* public Product(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.short_description = short_description;
-        this.active = active;
-        this.address = address;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.area = area;
-        this.average_score = average_score;
-        this.city = city;
-        this.category = category;
-    }*/
-
-    /*public Product(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.short_description = short_description;
-        this.active = active;
-        this.address = address;
-        this.latitude = latitude;
-        this.longitude = longitude;
-        this.area = area;
-        this.average_score = average_score;
-        this.city = city;
-        this.category = category;
-        this.policiesSite = policiesSite;
-        this.policiesSecurityAndHealth = policiesSecurityAndHealth;
-        this.policiesCancellation = policiesCancellation;
-    }*/
-
-    public Food(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation, List<FoodAttribute> attributes) {
+    public Restaurant(Integer id, String name, String description, String short_description, boolean active, String address, String latitude, String longitude, String area, Double average_score, City city, Category category, String policiesSite, String policiesSecurityAndHealth, String policiesCancellation, List<FoodAttribute> attributes) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -202,13 +170,6 @@ public class Food {
         this.category = category;
     }
 
-    public List<Image> getImage() {
-        return image;
-    }
-
-    public void setImage(List<Image> image) {
-        this.image = image;
-    }
 
     public String getPoliciesSite() {
         return policiesSite;

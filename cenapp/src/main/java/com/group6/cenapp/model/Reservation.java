@@ -19,8 +19,8 @@ public class Reservation {
     private String comments;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id")
-    private Food food;
+    @JoinColumn(name = "restaurant_id", referencedColumnName = "id")
+    private Restaurant restaurant;
 
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
@@ -29,13 +29,13 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(Integer id, Time arrival_time, LocalDate check_in_date, LocalDate checkout_date, String comments, Food food, User user) {
+    public Reservation(Integer id, Time arrival_time, LocalDate check_in_date, LocalDate checkout_date, String comments, Restaurant restaurant, User user) {
         this.id = id;
         this.arrival_time = arrival_time;
         this.check_in_date = check_in_date;
         this.checkout_date = checkout_date;
         this.comments = comments;
-        this.food = food;
+        this.restaurant = restaurant;
         this.user = user;
     }
 
@@ -79,12 +79,12 @@ public class Reservation {
         this.comments = comments;
     }
 
-    public Food getProduct() {
-        return food;
+    public Restaurant getProduct() {
+        return restaurant;
     }
 
-    public void setProduct(Food food) {
-        this.food = food;
+    public void setProduct(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
     public User getUser() {

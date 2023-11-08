@@ -2,6 +2,7 @@ package com.group6.cenapp.services.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.group6.cenapp.exception.DuplicatedValueException;
+import com.group6.cenapp.model.Image;
 import com.group6.cenapp.model.Role;
 import com.group6.cenapp.model.User;
 import com.group6.cenapp.model.dto.UserDto;
@@ -52,10 +53,12 @@ public class UserServiceImpl implements UserDetailsService {
     public Optional<User> getUserById(Integer id) { return userRepository.findById(id);}
 
     public User saveUser(UserDto userDto) throws DuplicatedValueException {
+
         Optional<User> existUser = userRepository.findByEmail(userDto.getEmail());
         if(existUser.isPresent()) {
             throw new DuplicatedValueException("Este email ya se encuentra en uso");
         }
+
         Role roleUser = roleRepository.findById(userDto.getRole().getId()).get();
         userDto.setRole(roleUser);
         userDto.setPassword(passwordEncoder.encode(userDto.getPassword()));
@@ -81,10 +84,7 @@ public class UserServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email).get();
         String role = user.getRole().getName();
-        //System.out.println(role);
 
-        //User user = userRepository.findByUsername(username)
-        //.orElseThrow(() -> new UsernameNotFoundException("User Not Found with username: " + username));
 
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
         authorities.add(new SimpleGrantedAuthority(role));
@@ -116,8 +116,7 @@ public class UserServiceImpl implements UserDetailsService {
 
     public String emailUser(String email) {
         User user = userRepository.findByEmail(email).get();
-        String eMail = user.getEmail();
-        return (eMail);
+        return (user.getEmail());
     }
 
     public String cityUser(String email){
@@ -131,6 +130,12 @@ public class UserServiceImpl implements UserDetailsService {
         User user = userRepository.findByEmail(email).get();
         String role = user.getRole().getName();
         return (role);
+    }
+
+    public Image imageUser(String email){
+        User user = userRepository.findByEmail(email).get();
+        Image image = user.getImage();
+        return (image);
     }
 
 }

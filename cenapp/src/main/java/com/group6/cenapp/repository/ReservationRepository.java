@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ReservationRepository extends JpaRepository<Reservation, Integer> {
     //consultar reserva por ID de producto
-    List<Reservation> findByProduct_Id(Integer productId);
+    List<Reservation> findByRestaurant_Id(Integer productId);
     List<Reservation> findByUser_id(Integer userId);
 
 

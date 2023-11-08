@@ -15,7 +15,7 @@ import java.util.Optional;
 @Api(tags="Roles")
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/roles")
+@RequestMapping("/v1/api/roles")
 public class RoleController {
     @Autowired
     private RoleService roleService;

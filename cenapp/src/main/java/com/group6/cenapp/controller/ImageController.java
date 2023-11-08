@@ -8,13 +8,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
+
 
 @Api(tags="Images")
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/images")
+@RequestMapping("/v1/api/images")
 public class ImageController {
     @Autowired
     private ImageService imageService;
@@ -34,21 +36,25 @@ public class ImageController {
         }
     }
 
-    @PostMapping("/create/{productId}")
-    public ResponseEntity<Image> createImage(@RequestBody Image image, @PathVariable Integer productId) {
-        return ResponseEntity.ok(imageService.saveImage(image,productId));
+    @PostMapping("/create/{restaurantId}")
+    public ResponseEntity<String> createImage(@RequestBody Image image, @PathVariable Integer restaurantId) {
+        byte[] imageData = Base64.getDecoder().decode(image.getUrl());
+        image.setUrl(Base64.getEncoder().encodeToString(imageData));
+        Image savedImage = imageService.saveImage(image, restaurantId);
+
+        if (savedImage != null) {
+            return ResponseEntity.ok("Se guardó con éxito la imagen.");
+        } else {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("No se pudo guardar la imagen.");
+        }
     }
 
-    /*@PostMapping("/create")
-    public ResponseEntity<Image> createImage(@RequestBody Image image) {
-        return ResponseEntity.ok(imageService.saveImage(image));
-    }*/
 
-    @PutMapping("/update/{productId}")
-    public ResponseEntity<?> updateImage(@RequestBody Image image, @PathVariable Integer productId) throws Exception {
+    @PutMapping("/update/{restaurantId}")
+    public ResponseEntity<?> updateImage(@RequestBody Image image, @PathVariable Integer restaurantId) throws Exception {
         Optional<Image> findImage = imageService.getImageById(image.getId());
         if (findImage.isPresent()) {
-            return ResponseEntity.ok(imageService.updateImage(image,productId));
+            return ResponseEntity.ok(imageService.updateImage(image,restaurantId));
         } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("La imagen con ID: " + image.getId() + " no se encuentra");
         }

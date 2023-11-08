@@ -12,25 +12,32 @@ import javax.persistence.*;
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id", scope = Image.class)
-@JsonIgnoreProperties(value = "product")
+@JsonIgnoreProperties(value = "restaurant")
 public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String title;
+    private String name;
     private String url;
 
     @ManyToOne
-    @JoinColumn(name="product_id", referencedColumnName = "id")
+    @JoinColumn(name="restaurant_id", referencedColumnName = "id")
     @JsonIdentityReference(alwaysAsId = true)
-    private Food food;
+    private Restaurant restaurant;
 
-    public Image() {
-    }
 
-   public Image(Integer id, String title, String url) {
+//    public Image(Integer id, String name, String url, Restaurant restaurant) {
+//        this.id = id;
+//        this.name = name;
+//        this.url = url;
+//        this.restaurant = restaurant;
+//    }
+
+    public Image(Integer id) {
         this.id = id;
-        this.title = title;
+    }
+    public Image(String name, String url) {
+        this.name = name;
         this.url = url;
     }
 
@@ -42,12 +49,12 @@ public class Image {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String title) {
+        this.name = title;
     }
 
     public String getUrl() {
@@ -58,11 +65,11 @@ public class Image {
         this.url = url;
     }
 
-    public Food getProduct() {
-        return food;
+    public Restaurant getProduct() {
+        return restaurant;
     }
 
-    public void setProduct(Food food) {
-        this.food = food;
+    public void setProduct(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 }

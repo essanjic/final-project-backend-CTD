@@ -9,7 +9,7 @@ public interface ReservationService {
 
 
     List<Reservation> findByUser_id(Integer userId);
-    List<Reservation> findByProduct_id(Integer productId);
+    List<Reservation> findByRestaurant_id(Integer restaurantId);
     List<Reservation> getAllReservation();
     Optional<Reservation> getReservationById(Integer id);
 

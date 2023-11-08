@@ -1,9 +1,9 @@
 package com.group6.cenapp.controller;
 
+import com.group6.cenapp.exception.DuplicatedValueException;
 import com.group6.cenapp.model.User;
 import com.group6.cenapp.model.dto.UserDto;
 import com.group6.cenapp.response.ApiResponseHandler;
-import com.group6.cenapp.exception.DuplicatedValueException;
 import com.group6.cenapp.services.impl.UserServiceImpl;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +18,14 @@ import java.util.Optional;
 @CrossOrigin(origins = "*",
 methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
-@RequestMapping("/v1/api/users")
-public class UserController {
+@RequestMapping("/v1/api/admin")
+public class AdministratorController {
 
 
     @Autowired
     private UserServiceImpl userService;
 
-    public UserController(UserServiceImpl userService) {
+    public AdministratorController(UserServiceImpl userService) {
         this.userService = userService;
     }
 
