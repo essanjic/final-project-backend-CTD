@@ -547,13 +547,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/airc2c",
+							"raw": "localhost:8080/cenapp",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"airc2c"
+								"cenapp"
 							]
 						}
 					},
@@ -637,7 +637,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"arrival_time\": \"10:30:00\",\r\n    \"check_in_date\": \"2025-02-17\",\r\n    \"checkout_date\": \"2025-02-24\",\r\n    \"comments\": \"llevo mi mascota\",\r\n    \"product\": {\r\n        \"id\": 8\r\n    },\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
+							"raw": "{\r\n    \"arrival_time\": \"10:30:00\",\r\n    \"check_in_date\": \"2025-02-17\",\r\n    \"checkout_date\": \"2025-02-24\",\r\n    \"comments\": \"llevaré mascota\",\r\n    \"restaurant\": {\r\n        \"id\": 8\r\n    },\r\n    \"user\": {\r\n        \"id\": 1\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -823,7 +823,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": " {\r\n     \"id\":52,\r\n     \"title\":\"Image Test222\",\r\n \"url\": \"https://0521ptc2n2-grupo9-airc2cs3.s3.us-east-2.amazonaws.com/airc2cimgs/casas/1/casa1-01-1366.jpg\",\r\n \"product\": {\"id\":1}\r\n }",
+							"raw": "{\r\n    \"id\": 52,\r\n    \"title\": \"Image Test222\",\r\n    \"url\": \"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hola.com%2Fmascotas%2Fgaleria%2F20210217184541%2Fgatos-gestos-lenguaje-significado%2F1%2F&psig=AOvVaw2trVmj0VaYCc5QQjeYN89O&ust=1700196137901000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCNjIhqjax4IDFQAAAAAdAAAAABAE\",\r\n    \"restaurant_id\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
