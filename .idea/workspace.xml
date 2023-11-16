@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="351db444-00d0-4610-851d-5d22b8713433" name="Changes" comment="feature: adding postman collection">
+      <change beforePath="$PROJECT_DIR$/cenapp/docs/postman/cenapp test backend.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/cenapp/docs/postman/cenapp test backend.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cenapp/src/main/java/com/group6/cenapp/model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/cenapp/src/main/java/com/group6/cenapp/model/Restaurant.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;essanjic&quot;
+  }
+}</component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="52b244a4-53ed-4c59-9200-40abc144ddf1" />
+        <option name="url" value="git@github.com:essanjic/final-project-backend-CTD.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/io/springfox/springfox-spi/3.0.0/springfox-spi-3.0.0.jar!/springfox/documentation/spi/DocumentationType.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2XVXGFYO19Ic2VpUcccqsnwZTDG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;11-d-configurar-rutas-api&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/Desktop/Final CTD/Backend/final-project-backend-CTD/cenapp/src/main/java/com/group6/cenapp/repository&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Final CTD\Backend\final-project-backend-CTD\cenapp\src\main\java\com\group6\cenapp\repository" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Desktop\Final CTD\Backend\final-project-backend-CTD\cenapp" />
+      <recent name="C:\Users\user\Desktop\Final CTD\Backend\final-project-backend-CTD\cenapp\scripts" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.group6.cenapp.repository" />
+      <recent name="com.group6.cenapp.services.impl" />
+      <recent name="com.group6.cenapp.services" />
+      <recent name="com.group6.cenapp.model" />
+      <recent name="com.group6.cenapp.model.dto" />
+    </key>
+  </component>
+  <component name="RunManager" selected="HTTP Request.generated-requests | #1">
+    <configuration name="generated-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" requestIdentifier="#2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests | #5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="5" requestIdentifier="#5" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="Cenapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="cenapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.group6.cenapp.Cenapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.group6.cenapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cenapp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cenapp" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.group6.cenapp.cenapp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="351db444-00d0-4610-851d-5d22b8713433" name="Changes" comment="" />
+      <created>1698715130622</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698715130622</updated>
+      <workItem from="1698715134038" duration="1538000" />
+      <workItem from="1698875646310" duration="317000" />
+      <workItem from="1698877970545" duration="3767000" />
+      <workItem from="1698892034119" duration="418000" />
+      <workItem from="1698892478938" duration="2227000" />
+      <workItem from="1698970721289" duration="8379000" />
+      <workItem from="1698984308223" duration="5950000" />
+      <workItem from="1699050425566" duration="607000" />
+      <workItem from="1699204368570" duration="393000" />
+      <workItem from="1699204780786" duration="19202000" />
+      <workItem from="1699309609915" duration="7469000" />
+      <workItem from="1699326081365" duration="1297000" />
+      <workItem from="1699401227526" duration="8594000" />
+      <workItem from="1699462074403" duration="10969000" />
+      <workItem from="1699485837563" duration="2322000" />
+      <workItem from="1699570248710" duration="2156000" />
+      <workItem from="1699769914611" duration="14000" />
+      <workItem from="1699919284820" duration="207000" />
+      <workItem from="1699936144275" duration="68000" />
+      <workItem from="1699937353831" duration="37000" />
+      <workItem from="1699939030765" duration="35000" />
+      <workItem from="1699939077075" duration="19000" />
+      <workItem from="1699939162243" duration="14000" />
+      <workItem from="1699939193771" duration="11000" />
+      <workItem from="1699940114511" duration="32000" />
+      <workItem from="1699940164336" duration="13000" />
+      <workItem from="1699940193258" duration="15000" />
+      <workItem from="1699940249647" duration="22000" />
+      <workItem from="1699942457633" duration="16000" />
+      <workItem from="1699945966120" duration="85000" />
+      <workItem from="1700108155009" duration="33000" />
+      <workItem from="1700108198706" duration="24000" />
+      <workItem from="1700108324885" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/11-d-configurar-rutas-api" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature: adding postman collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: adding postman collection" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.boot.web.server.WebServerException" package="org.springframework.boot.web.server" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

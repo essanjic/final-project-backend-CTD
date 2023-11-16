@@ -1,0 +1,1095 @@
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T185734.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T185522.500.json
+
+###
+
+POST http://localhost:8080/v1/api/restaurants/create
+Content-Type: application/json
+Content-Length: 790
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "name": "Prueba 1",
+  "description": "Hola soy yo askjdlaksjdlaksj naskdnasknd",
+  "short_description": "Hola soy ...",
+  "address": "Calle 123",
+  "zone/street": "Zona prueba",
+  "rating": 4.5,
+  "admin_id": 3,
+  "day_disponibility": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": true,
+    "sunday": false
+  },
+  "parking": true,
+  "live_music": true,
+  "events": true,
+  "terraza": false,
+  "active": true,
+  "area": "10 m2",
+  "average_score": 4.5,
+  "latitude": "prueba1",
+  "longitude": "Prueba2",
+  "cancellation_policies": "soy una prueba de cancelación y políticas",
+  "hse_policies": "hse_policies prueba",
+  "site_policies": "site_policies prueba",
+  "category_id": 1,
+  "city_id": 1
+}
+
+<> 2023-11-08T182202.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T145950.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T144802.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T144717.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T142218.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T142011.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T141436.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T141155.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-08T140926.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 207
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": {
+    "id": 1,
+    "name": "USER"
+  },
+  "image_id": null
+}
+
+<> 2023-11-08T140842.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T140439.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 168
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T140432.400.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T140324.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T135523.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T134808.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T134456.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T133656.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T133258.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T133103.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 171
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh32d@yahoo.com",
+  "password": "1323w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T132904.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "joh3d@yahoo.com",
+  "password": "123w4567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T132601.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 169
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doed",
+  "email": "johnsd@yahoo.com",
+  "password": "1234567",
+  "enabled": true,
+  "city_id": 3,
+  "role_id": 2,
+  "image_id": null
+}
+
+<> 2023-11-08T132356.200.json
+
+###
+
+POST http://localhost:8080/v1/api/restaurants/create
+Content-Type: application/json
+Content-Length: 790
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "name": "Prueba 1",
+  "description": "Hola soy yo askjdlaksjdlaksj naskdnasknd",
+  "short_description": "Hola soy ...",
+  "address": "Calle 123",
+  "zone/street": "Zona prueba",
+  "rating": 4.5,
+  "admin_id": 3,
+  "day_disponibility": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": true,
+    "sunday": false
+  },
+  "parking": true,
+  "live_music": true,
+  "events": true,
+  "terraza": false,
+  "active": true,
+  "area": "10 m2",
+  "average_score": 4.5,
+  "latitude": "prueba1",
+  "longitude": "Prueba2",
+  "cancellation_policies": "soy una prueba de cancelación y políticas",
+  "hse_policies": "hse_policies prueba",
+  "site_policies": "site_policies prueba",
+  "category_id": 1,
+  "city_id": 1
+}
+
+<> 2023-11-07T201832.500.json
+
+###
+
+POST http://localhost:8080/v1/api/restaurants/create
+Content-Type: application/json
+Content-Length: 790
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "name": "Prueba 1",
+  "description": "Hola soy yo askjdlaksjdlaksj naskdnasknd",
+  "short_description": "Hola soy ...",
+  "address": "Calle 123",
+  "zone/street": "Zona prueba",
+  "rating": 4.5,
+  "admin_id": 3,
+  "day_disponibility": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": true,
+    "sunday": false
+  },
+  "parking": true,
+  "live_music": true,
+  "events": true,
+  "terraza": false,
+  "active": true,
+  "area": "10 m2",
+  "average_score": 4.5,
+  "latitude": "prueba1",
+  "longitude": "Prueba2",
+  "cancellation_policies": "soy una prueba de cancelación y políticas",
+  "hse_policies": "hse_policies prueba",
+  "site_policies": "site_policies prueba",
+  "category_id": 1,
+  "city_id": 1
+}
+
+<> 2023-11-07T201634.500.json
+
+###
+
+POST http://localhost:8080/v1/api/restaurants/create
+Content-Type: application/json
+Content-Length: 790
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 1,
+  "name": "Prueba 1",
+  "description": "Hola soy yo askjdlaksjdlaksj naskdnasknd",
+  "short_description": "Hola soy ...",
+  "address": "Calle 123",
+  "zone/street": "Zona prueba",
+  "rating": 4.5,
+  "admin_id": 3,
+  "day_disponibility": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": true,
+    "sunday": false
+  },
+  "parking": true,
+  "live_music": true,
+  "events": true,
+  "terraza": false,
+  "active": true,
+  "area": "10 m2",
+  "average_score": 4.5,
+  "latitude": "prueba1",
+  "longitude": "Prueba2",
+  "cancellation_policies": "soy una prueba de cancelación y políticas",
+  "hse_policies": "hse_policies prueba",
+  "site_policies": "site_policies prueba",
+  "category_id": 1,
+  "city_id": 1
+}
+
+<> 2023-11-07T201618.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 167
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "1234567",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-07T193104.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-06T190033.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-06T175732.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-05T233946.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-05T231120.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-05T161338.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-05T161333.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 166
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": 1,
+  "role_id": 1,
+  "image_id": null
+}
+
+<> 2023-11-05T161320.500.json
+
+###
+
+PUT http://localhost:8080/v1/api/users/update/1
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T154506.404.json
+
+###
+
+PUT http://localhost:8080/v1/api/users/update/1
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T154456.404.json
+
+###
+
+PUT http://localhost:8080/v1/api/users/update
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T152141.400.json
+
+###
+
+GET http://localhost:8080/v1/api/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T152136.200.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 160
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city": null,
+  "role": 2,
+  "image": null
+}
+
+<> 2023-11-05T145128.400.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 163
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city": null,
+  "role": null,
+  "image": null
+}
+
+<> 2023-11-05T141328.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 97
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456"
+
+
+}
+
+<> 2023-11-05T141210.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 98
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+
+
+}
+
+<> 2023-11-05T141201.400.json
+
+###
+
+GET http://localhost:8080/v1/api/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T141145.200.json
+
+###
+
+GET http://localhost:8080/api/v1/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T141114.404.json
+
+###
+
+GET http://localhost:8080/api/v1/users
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-11-05T141034.404.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 96
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456"
+
+}
+
+<> 2023-11-05T141018.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "city_id": null,
+  "role_id": null
+}
+
+<> 2023-11-05T141006.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 133
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "city_id": null,
+  "role_id": null
+}
+
+<> 2023-11-05T141003.500.json
+
+###
+
+POST http://localhost:8080/v1/api/users/create
+Content-Type: application/json
+Content-Length: 152
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "name": "John",
+  "lastname": "doe",
+  "email": "johnd@yahoo.com",
+  "password": "123456",
+  "enabled": true,
+  "city_id": null,
+  "role_id": null
+}
+
+<> 2023-11-05T140956.500.json
+
+###
+

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "id": 4,
+    "name": "John",
+    "email": "johnd@yahoo.com",
+    "password": "$2a$10$9YABcPUaKgSS7a3ZIqedROh082x3KHGcZ0HpZkpQhTusuf4JqAAcO",
+    "enabled": true,
+    "city": null,
+    "role": null,
+    "image": null,
+    "lastname": "doe"
+  },
+  "message": "User data save successfully",
+  "status": 200
+}

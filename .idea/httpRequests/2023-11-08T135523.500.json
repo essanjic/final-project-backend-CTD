@@ -1,0 +1,6 @@
+{
+  "timestamp": 1699469723061,
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/v1/api/users/create"
+}
