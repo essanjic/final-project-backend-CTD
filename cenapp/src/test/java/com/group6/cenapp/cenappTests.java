@@ -1,10 +1,10 @@
-package com.sixthgroup.cenapp;
+package com.group6.cenapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CenappApplicationTests {
+class cenappTests {
 
 	@Test
 	void contextLoads() {
